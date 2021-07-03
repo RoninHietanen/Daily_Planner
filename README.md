@@ -16,4 +16,4 @@ This page contains a Daily planner where you can add tasks to and it will store 
 
 ## Screenshots of the Website:
 
-![Daily Planner](/assets/Screenshots/DailyPlanner?raw=true "Optional Title")
+![Daily Planner](/assets/Screenshots/DailyPlanner.PNG?raw=true "Optional Title")
