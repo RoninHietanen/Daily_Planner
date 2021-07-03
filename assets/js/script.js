@@ -1,9 +1,9 @@
 $(document).ready(function () {
     // The current time
-    var time;
-    time = moment().format("X");
-    var timeFormat = moment.unix(time).format("MMM Do, YYYY");
-    $("#currentDay").text(timeFormat);
+    var day;
+    day = moment().format("X");
+    var dayFormat = moment.unix(day).format("MMM Do, YYYY");
+    $("#currentDay").text(dayFormat);
 
     var $text9AM = $("#text9AM");
     var $text10AM = $("#text10AM");
@@ -15,8 +15,22 @@ $(document).ready(function () {
     var $text4PM = $("#text4PM");
     var $text5PM = $("#text5PM");
 
+    $("textarea").each(function () {
+        var text = parseInt($(this).attr("name"));
+        var currentTime;
+        currentTime = moment().format("X");
+        var TimeFormat = moment.unix(currentTime).format("k");
 
-    
+        if (text < TimeFormat) {
+            $(this).addClass("past");
+        }
+        if (text === TimeFormat) {
+            $(this).addClass("present")
+        }
+        if (text > TimeFormat) {
+            $(this).addClass("future")
+        }
+    })
 
     $("button").on("click", function () {
         localStorage.setItem("9AM", ($text9AM.val()))
