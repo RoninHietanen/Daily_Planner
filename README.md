@@ -4,7 +4,7 @@ This is the README of my homework for the daily planner for my bootcamp course.
 
 Below is the link to the live page:
 
--- gg --
+-- https://roninhietanen.github.io/Daily_Planner/ --
 
 # General Information:
 
